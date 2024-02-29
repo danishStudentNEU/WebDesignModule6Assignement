@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: #d3d3d3;
+        }
+         .container {
+            display: grid; /* Use Flexbox */
+            grid-template-columns: 500px 1fr;
+            grid-template-rows: 150px 50px 1fr 150px;
+            gap:0px;
+            margin: 0;
+        }
+        header {
+            text-align: center;
+            background-color: #f0f09e;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        img {
+            max-width: fit-content;
+            max-height: fit-content;
+        }
+
+        aside img{
+            border-radius: 8px;
+            width: 100px;
+            height: 120px;
+        }
+
+       .navigation {
+            grid-row-start: 2;
+            grid-row-end:3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .book-details{
+            grid-column-start:1 ;
+            grid-column-end: 4;
+
+        }
+
+        .footer-body{
+            background-color: #f0f09e;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            display: grid;
+            grid-template-columns: 300px 500px 1fr;
+            grid-template-rows: 1fr;
+            padding: 10px ;
+            gap: 10px;
+        }
+        .logo{
+            text-align: center;
+        }
+        .site-links {
+            text-align: center;
+            align-self: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="name-logo"><img src="C:\Users\Admin\Desktop\VS Code Web Design and Development\Assignement 6 WebDesign\The Vallejo Public Library 2.png"/></div>
+        </header>
+        <div class="navigation">
+            <nav>
+                <a href="#home">Catalog</a>
+                <a href="#news">About Us</a>
+                <a href="#contact">Register</a>
+                <a href="#about">Enquiry</a>
+                <a href="#about">Loan a Book</a>
+                <a href="#about">News</a>
+                <a href="#about">Logout</a>
+            </nav>
+        </div>
+
+        <div class="book-details">
+        <section>
+            <h2>Lord of The Rings</h2>Author: J.R.R Tolkein
+        </section>
+        <aside>
+            <img src="C:\Users\Admin\Desktop\VS Code Web Design and Development\Assignement 6 WebDesign\book 1.jpeg"/>
+        </aside>
+    
+        <p>J.R.R. Tolkien's "The Lord of the Rings" is a timeless epic fantasy novel set 
+            in the fictional world of Middle-earth. It follows the quest of a young hobbit
+             named Frodo Baggins to destroy the One Ring, a powerful artifact that could bring
+              about the return of the Dark Lord Sauron. Alongside his companions, including the 
+              wizard Gandalf and the warriors Aragorn, Legolas, and Gimli, Frodo embarks on a perilous
+               journey across Middle-earth, encountering a rich tapestry of cultures, creatures, and landscapes. 
+               Filled with themes of friendship, heroism, sacrifice, and the struggle between good and evil, 
+               "The Lord of the Rings" has captivated readers for generations with its immersive world-building, 
+               complex characters, and epic storytelling.</p>
+    
+        Number of copies of the book : 10 <br>
+        Number of available copies: 5 <br>
+    
+        <button>Reserve</button>
+        </div>
+            <div class="footer-body">
+                <div class="logo"><img src="C:\Users\Admin\Desktop\VS Code Web Design and Development\Assignement 6 WebDesign\logo.png" width="500" height="128"/></div>
+                <div class="name"><img src="C:\Users\Admin\Desktop\VS Code Web Design and Development\Assignement 6 WebDesign\name.png" width="500" height="128"/></div>
+                <div class="site-links">
+                    <h2>Site Links</h2>
+                    <ul>
+                        <li>Site Map</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+</body>
+</html>

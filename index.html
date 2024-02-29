@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: #d3d3d3;
+        }
+         .container {
+            display: grid; /* Use Flexbox */
+            grid-template-columns: 500px 1fr;
+            grid-template-rows: 150px 50px 1fr 300px 150px;
+            gap:0px;
+            margin: 0;
+        }
+        header {
+            text-align: center;
+            background-color: #f0f09e;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        img {
+            max-width: fit-content;
+            max-height: fit-content;
+        }
+
+       .navigation {
+            grid-row-start: 2;
+            grid-row-end:3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .new-arrivals{
+            margin-top: 20px;
+            border: 3px solid #000000;
+            width: 500px;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .new-arrivals-title {
+            border: 3px solid #000000;
+            background-color: #ff0000;
+            text-align: center;
+        }
+    
+        .new-arrivals-body  img{
+            border-radius: 8px;
+            width: 100px;
+            height: 120px;
+        }
+        .first-book,.second-book, .third-book{
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .first-book :hover{
+            background-color:#b0b0b0;
+            cursor: pointer;
+        }
+
+        .second-book :hover{
+            background-color:#b0b0b0;
+            cursor: pointer;
+        }
+
+        .third-book :hover{
+            background-color:#b0b0b0;
+            cursor: pointer;
+        }
+
+        .first-book-details, .second-book-details,.third-book-details {
+            margin-left: 20px;
+        }
+        .first-book-name, .second-book-name,.third-book-name {
+            font-size: large;
+        }
+        .first-author-genre, .second-author-genre, .third-author-genre {
+            display: flex;
+        }
+        .first-book-author , .first-book-genre, .second-book-author , .second-book-genre, .third-book-author , .third-book-genre{
+            font-size: small;
+        } 
+        .first-book-genre, .second-book-genre, .third-book-genre {
+            margin-left: 50px;
+        }
+
+        .check-availability { /* Take up remaining space */
+            margin-top:20px;
+            border: 3px solid #000000;
+            width: fit-content;
+            margin-left: 50px;
+            height: fit-content;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .check-availability-title {
+            border: 3px solid #000000;
+            background-color: #ff0000;
+            text-align: center;
+        }
+
+         .check-availability-body{
+            display: grid;
+            grid-template-columns: 100px 200px;
+            grid-template-rows: 40px 40px 40px ;
+            padding: 10px ;
+            gap: 10px;
+        } 
+
+        .check-availability-keyword-search, .check-availability-author-search {
+            display: flex;
+        }
+
+        .search-button {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            justify-self: center;
+        }
+
+        .latest-news{
+            border: 3px solid #000000;
+            width: fit-content;
+            margin-left: 50px;
+            height: fit-content;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        .latest-news-title{
+            border: 3px solid #000000;
+            background-color: #ff0000;
+            text-align: center;
+        }
+        .latest-news-body {
+            display: grid;
+            grid-template-columns: 300px;
+            grid-template-rows: 50px 50px 50px;
+            padding: 10px ;
+            gap: 10px;
+        }
+
+        .footer-body{
+            background-color: #f0f09e;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            display: grid;
+            grid-template-columns: 300px 500px 1fr;
+            grid-template-rows: 1fr;
+            padding: 10px ;
+            gap: 10px;
+        }
+        .logo{
+            text-align: center;
+        }
+        .site-links {
+            text-align: center;
+            align-self: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="name-logo"><img src="C:\Users\Admin\Desktop\VS Code Web Design and Development\Assignement 6 WebDesign\The Vallejo Public Library 2.png"/></div>
+        </header>
+        <div class="navigation">
+            <nav>
+                <a href="#home">Catalog</a>
+                <a href="#news">About Us</a>
+                <a href="#contact">Register</a>
+                <a href="#about">Enquiry</a>
+                <a href="#about">Loan a Book</a>
+                <a href="#about">News</a>
+                <a href="#about">Logout</a>
+            </nav>
+        </div>
+        <div class="new-arrivals">
+            <div class="new-arrivals-title">New Arrivals</div>
+            <div class="new-arrivals-body">
+                <div class="first-book" onclick="window.location.href = 'BookPage.html';">
+                    <div class="first-book-image"><img src="C:\Users\Admin\Desktop\VS Code Web Design and Development\Assignement 6 WebDesign\book 1.jpeg" /></div>
+                    <div class="first-book-details">
+                            <div class="first-book-name"><b>Lord of the Rings</b></div>
+                            <div class="first-author-genre">
+                            <div class="first-book-author">J.R.R Tolkein</div>
+                            <div class="first-book-genre">Fiction</div>
+                            </div>
+                            <div class="first-book-summary"><br>"Lord of the Rings" is a classic high fantasy novel by J.R.R. Tolkien. The story explores themes of 
+                                friendship, heroism, and the struggle between good and evil, culminating in an epic battle for the fate of Middle-earth.</div>
+                    </div>
+                </div>
+                <div class="second-book">
+                    <div class="second-book-image"><img src="C:\Users\Admin\Desktop\VS Code Web Design and Development\Assignement 6 WebDesign\book 2.jpg" /></div>
+                    <div class="second-book-details">
+                            <div class="second-book-name"><b>Albert Einstein</b></div>
+                            <div class="second-author-genre">
+                            <div class="second-book-author">Wil Mara</div>
+                            <div class="second-book-genre">Biography</div>
+                            </div>
+                            <div class="second-book-summary"><br>"Albert Einstein" by Wil Mara provides a concise and insightful biography of the renowned physicist, exploring his groundbreaking theories, personal life, and enduring legacy. Through vivid storytelling, Mara captures Einstein's genius, challenges, and 
+                                impact on science, making this book an engaging and accessible read for all curious minds.</div>
+                    </div>
+                </div>
+                <div class="third-book">
+                    <div class="third-book-image"><img src="C:\Users\Admin\Desktop\VS Code Web Design and Development\Assignement 6 WebDesign\book 3.jpg" /></div>
+                    <div class="third-book-details">
+                            <div class="third-book-name"><b>Indian History:Second Edition</b></div>
+                            <div class="third-author-genre">
+                            <div class="third-book-author">Krishna Reddy</div>
+                            <div class="third-book-genre">Reference</div>
+                            </div>
+                            <div class="third-book-summary"><br>"Krishna Reddy's 'Indian History' provides a comprehensive overview of India's past, covering key events, cultures, and civilizations.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="check-availability">
+            <div class="check-availability-title">Check Availability</div>
+            <div class="check-availability-body">
+                <div class="keyword">Keyword :</div>
+                <div class="input-keyword"><input type="text"></div>
+                <div class="author">Author :</div>
+                <div class="input-author"><input type="text"></div>
+                <div class="search-button"><Button type="button">Search Book</Button></div>
+            </div>
+        </div>
+        <div class="latest-news">
+            <div class="latest-news-title">Latest News</div>
+            <div class ="latest-news-body">
+                <div class="1st">Local updates on politics, events, culture, and economy in regions.</div>
+                <div class="2nd">Recent national news includes updates on politics, impacting citizens across the country</div>
+                <div class="3rd">Global events, politics, economy, culture, and more, impacting nations worldwide.</div>
+            </div>
+        </div>
+            <div class="footer-body">
+                <div class="logo"><img src="C:\Users\Admin\Desktop\VS Code Web Design and Development\Assignement 6 WebDesign\logo.png" width="500" height="128"/></div>
+                <div class="name"><img src="C:\Users\Admin\Desktop\VS Code Web Design and Development\Assignement 6 WebDesign\name.png" width="500" height="128"/></div>
+                <div class="site-links">
+                    <h2>Site Links</h2>
+                    <ul>
+                        <li>Site Map</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+</body>
+</html>
